@@ -41,3 +41,6 @@ Just do `cmd-alt-shift-L`. That will refresh Atom.
 
 * http://flight-manual.atom.io/
 * https://www.sitepoint.com/how-to-write-a-syntax-highlighting-package-for-atom/
+* http://www.apeth.com/nonblog/stories/textmatebundle.html
+* http://manual.macromates.com/en/language_grammars.html#naming_conventions
+* https://regex101.com/
