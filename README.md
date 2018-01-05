@@ -1,11 +1,8 @@
 # Nextflow language support in Atom
 
-[![Build Status](https://travis-ci.org/Jakehp/language-groovy.svg?branch=master)](https://travis-ci.org/Jakehp/language-groovy)
+Adds syntax highlighting and snippets to Nextflow files in Atom.
 
-Adds syntax highlighting and snippets to Groovy files in Atom.
-
-Originally [converted](https://atom.io/docs/latest/hacking-atom-converting-from-textmate)
-from the [groovy.tmbundle](https://github.com/textmate/groovy.tmbundle).
+Originally converted from the [language-groovy](https://github.com/Jakehp/language-groovy) Atom package.
 
 Contributions are *greatly* appreciated. Please fork this repository, open a pull request to add snippets, make grammar tweaks, fix issues, etc.
 
@@ -18,13 +15,27 @@ If `apm` is not recognized, open Atom, open the Atom menu, and select "Install S
 
 ## Local Development
 
-You can use `apm` to link the local copy and install the dependencies:
+1. Fork this repository and clone in a local directory. 
+
+2. Use `apm` to link the local copy and install the dependencies:
 
 ```shell
-> apm dev language-nextflow /path/to/your/cloned/fork
+apm dev language-nextflow /path/to/your/cloned/fork
 ```
 
-The package will appear in the *Development* section of Atom's packages. Re-open your window in Development Mode (*View->Developer->Open in Dev Mode*) and test your changes.
+3. Finally load Atom in development mode: 
 
-Contributors:  
-[AwaNoodle](https://github.com/AwaNoodle), [ssbarnea](https://github.com/ssbarnea), [sjurgemeyer](https://github.com/sjurgemeyer), [glaforge](https://github.com/glaforge), [alberthier](https://github.com/alberthier), [kpitt](https://github.com/kpitt), [ChristianMurphy](https://github.com/ChristianMurphy), [bhuddleston42](https://github.com/bhuddleston42), [bakharal](https://github.com/bakharal)
+```shell
+cd ~/.atom/dev/packages/language-nextflow
+atom -d
+```
+
+The package will appear in the *Development* section of Atom's packages. If you already 
+have Atom opened in developer mode and want to reload packages so you can test your changes. 
+Just do `cmd-alt-shift-L`. That will refresh Atom.
+
+
+## Useful links 
+
+* http://flight-manual.atom.io/
+* https://www.sitepoint.com/how-to-write-a-syntax-highlighting-package-for-atom/

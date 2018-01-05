@@ -1,0 +1,21 @@
+{
+  "name": "language-nextflow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nextflow language support in Atom",
+  "repository": "https://github.com/pditommaso/language-groovy",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0 <2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/pditommaso/language-groovy/issues"
+  },
+  "scripts": {
+    "test": "coffeelint grammars/groovy.cson settings/language-groovy.cson snippets/language-groovy.cson"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffeelint": "1.10.1"
+  }
+}
