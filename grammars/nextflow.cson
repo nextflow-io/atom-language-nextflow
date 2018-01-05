@@ -8,4 +8,16 @@
   {
     'include': 'source.groovy'
   }
+  {
+    'include': '#process'
+  }
 ]
+'repository':
+  'process': 
+    'begin': '\\s*(process)\\s+(\\w+)\\s*{'
+    'beginCaptures':
+      '1':
+        'name': 'keyword.nextflow'
+      '2':
+        'name': 'function.nextflow'  
+    'end': '}'
