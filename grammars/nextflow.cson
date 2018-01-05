@@ -9,16 +9,22 @@
     'include': 'source.groovy'
   }
   {
-    'include': '#process'
+    'include': '#nextflow'
   }
 ]
 'repository':
-  'process': 
+  'nextflow':
+    'patterns': [
+      {
+        'include': '#process'
+      }
+    ]
+  'process':
     'name': 'support.process.nextflow'
     'begin': '\\s*(process)\\s+(\\w+)\\s*{'
     'beginCaptures':
       '1':
         'name': 'support.keyword.nextflow'
       '2':
-        'name': 'support.function.nextflow'  
+        'name': 'support.function.nextflow'
     'end': '}'
