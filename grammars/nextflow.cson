@@ -1,0 +1,11 @@
+'name': 'Nextflow'
+'scopeName': 'source.nextflow'
+'fileTypes': [ 'nf' ]
+'firstLineMatch': '^#!/*.*\\bnextflow'
+'foldingStartMarker': '(\\{\\s*$|^\\s*// \\{\\{\\{)'
+'foldingStopMarker': '^\\s*(\\}|// \\}\\}\\}$)'
+'patterns': [
+  {
+    'include': 'source.groovy'
+  }
+]

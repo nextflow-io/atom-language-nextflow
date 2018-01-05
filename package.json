@@ -12,7 +12,7 @@
     "url": "https://github.com/nextflow-io/atom-package/issues"
   },
   "scripts": {
-    "test": "coffeelint grammars/groovy.cson settings/language-groovy.cson snippets/language-groovy.cson"
+    "test": "coffeelint grammars/groovy.cson grammars/nextflow.cson settings/language-nextflow.cson snippets/language-nextflow.cson"
   },
   "dependencies": {},
   "devDependencies": {
