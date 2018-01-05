@@ -14,10 +14,11 @@
 ]
 'repository':
   'process': 
+    'name': 'support.process.nextflow'
     'begin': '\\s*(process)\\s+(\\w+)\\s*{'
     'beginCaptures':
       '1':
-        'name': 'keyword.nextflow'
+        'name': 'support.keyword.nextflow'
       '2':
-        'name': 'function.nextflow'  
+        'name': 'support.function.nextflow'  
     'end': '}'
