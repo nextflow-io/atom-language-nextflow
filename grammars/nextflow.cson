@@ -28,3 +28,38 @@
       '2':
         'name': 'support.function.nextflow'
     'end': '}'
+    'patterns': [
+      {
+        'include': '#directive'
+      }
+      {
+        'include': '#input'
+      }
+      {
+        'include': '#output'
+      }
+      {
+        'include': '#when'
+      }
+      {
+        'include': '#command'
+      }
+      {
+        'include': '#groovy-code'
+      }
+    ]
+  'directive':
+    'name': 'support.process.directive.type.nextflow'
+    'match': '(afterScript|beforeScript|cache|container|cpus|clusterOptions|disk|echo|errorStrategy|executor|ext|maxErrors|maxForks|maxRetries|memory|module|penv|publishDir|queue|scratch|storeDir|stageInMode|stageOutMode|tag|time|validExitStatus)\\b'
+  'input':
+    'name': 'support.process.input.constant.nextflow'
+    'match': 'input:'
+  'output':
+    'name': 'support.process.output.constant.nextflow'
+    'match': 'output:'
+  'when':
+    'name': 'support.process.when.constant.nextflow'
+    'match': 'when:'
+  'command':
+    'name': 'support.process.command.constant.nextflow'
+    'match': '(script|shell|exec)\\b:'
