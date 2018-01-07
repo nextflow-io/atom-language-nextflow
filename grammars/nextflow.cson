@@ -6,7 +6,7 @@
 'foldingStopMarker': '^\\s*(\\}|// \\}\\}\\}$)'
 'patterns': [
   {
-    'include': 'source.groovy'
+    'include': 'source.nextflow-groovy'
   }
   {
     'include': '#nextflow'
