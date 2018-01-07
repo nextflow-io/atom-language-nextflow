@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/nextflow-io/atom-package.svg?branch=master)](https://travis-ci.org/nextflow-io/atom-package)
 
-Adds syntax highlighting and snippets to Nextflow files in Atom.
+Adds syntax highlighting and snippets to [Nextflow](https://www.nextflow.io) files in Atom.
 
 Originally converted from the [language-groovy](https://github.com/Jakehp/language-groovy) Atom package.
 
