@@ -1,6 +1,6 @@
 {
   "name": "language-nextflow",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "description": "Nextflow language support in Atom",
   "repository": "https://github.com/nextflow-io/atom-language-nextflow",
