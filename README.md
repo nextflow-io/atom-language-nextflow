@@ -1,6 +1,6 @@
 # Nextflow language support in Atom
 
-[![Build Status](https://travis-ci.org/nextflow-io/atom-package.svg?branch=master)](https://travis-ci.org/nextflow-io/atom-package)
+[![Build Status](https://travis-ci.org/nextflow-io/atom-language-nextflow.svg?branch=master)](https://travis-ci.org/nextflow-io/atom-language-nextflow)
 
 Adds syntax highlighting and snippets to [Nextflow](https://www.nextflow.io) files in Atom.
 
