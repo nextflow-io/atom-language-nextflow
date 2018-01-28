@@ -12,3 +12,19 @@
         $3
       }
     """
+  'errorStrategy':
+    'prefix': 'erro'
+    'body': 'errorStrategy \'$1\''
+  'clusterOptions':
+    'prefix': 'clus'
+    'body': 'clusterOptions \'$1\''
+  'maxErrors':
+    'prefix': 'maxe'
+    'body': 'maxErrors $1'
+  'maxRetries':
+    'prefix': 'maxr'
+    'body': 'maxRetries $1'
+  'publishDir':
+    'prefix': 'publ'
+    'body': 'publishDir $1'
+       

@@ -6,28 +6,38 @@
 'foldingStopMarker': '^\\s*(\\}|// \\}\\}\\}$)'
 'patterns': [
   {
-    'include': 'source.nextflow-groovy'
-  }
-  {
-    'include': '#nextflow'
-  }
+    'include': '#nfl-rules'
+  }  
 ]
 'repository':
-  'nextflow':
+  'nfl-rules':
     'patterns': [
       {
-        'include': '#process'
+        'include': '#process-def'
       }
-    ]
-  'process':
+      {
+        'include': '#if-statement'
+      }    
+      {
+        'include': 'source.nextflow-groovy'
+      }      
+    ]    
+  'process-def':
     'name': 'support.process.nextflow'
-    'begin': '^\\s*(process)\\s+(\\w+|"[^"]+"|\'[^\']+\')\\s*{'
+    'begin': '^\\s*(process)\\s+(\\w+|"[^"]+"|\'[^\']+\')\\s*'
     'beginCaptures':
       '1':
         'name': 'support.keyword.nextflow'
       '2':
         'name': 'support.function.nextflow'
     'end': '}'
+    'patterns': [
+      'include': '#process-body'
+    ]
+  'process-body': 
+    'name': 'support.process.body.nextflow'
+    'begin': '{'
+    'end': '(?=})'
     'patterns': [
       {
         'name': 'support.process.directive.type.nextflow'
@@ -64,5 +74,19 @@
       {
         'include': 'source.nextflow-groovy#braces'
       }
-    ]
-
+    ] 
+  'if-statement':
+    'begin': '^\\s*(if)\\s*\\((?:[^\\)]*)\\)\\s*'
+    'beginCaptures':
+      '1':
+        'name': 'support.keyword.if.nextflow'
+    'end': '}'
+    'patterns': [
+      {
+        'begin': '{'
+        'end': '(?=})'
+        'patterns': [
+          'include': '#nfl-rules'  
+        ]
+      }     
+    ]    
