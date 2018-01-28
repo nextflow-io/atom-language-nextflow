@@ -7,7 +7,7 @@
 'patterns': [
   {
     'include': '#nfl-rules'
-  }  
+  }
 ]
 'repository':
   'nfl-rules':
@@ -17,11 +17,11 @@
       }
       {
         'include': '#if-statement'
-      }    
+      }
       {
         'include': 'source.nextflow-groovy'
-      }      
-    ]    
+      }
+    ]
   'process-def':
     'name': 'support.process.nextflow'
     'begin': '^\\s*(process)\\s+(\\w+|"[^"]+"|\'[^\']+\')\\s*'
@@ -34,7 +34,7 @@
     'patterns': [
       'include': '#process-body'
     ]
-  'process-body': 
+  'process-body':
     'name': 'support.process.body.nextflow'
     'begin': '{'
     'end': '(?=})'
@@ -74,7 +74,7 @@
       {
         'include': 'source.nextflow-groovy#braces'
       }
-    ] 
+    ]
   'if-statement':
     'begin': '^\\s*(if)\\s*\\((?:[^\\)]*)\\)\\s*'
     'beginCaptures':
@@ -86,7 +86,7 @@
         'begin': '{'
         'end': '(?=})'
         'patterns': [
-          'include': '#nfl-rules'  
+          'include': '#nfl-rules'
         ]
-      }     
-    ]    
+      }
+    ]
