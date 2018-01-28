@@ -21,7 +21,7 @@
     ]
   'process':
     'name': 'support.process.nextflow'
-    'begin': '\\s*(process)\\s+(\\w+)\\s*{'
+    'begin': '^\\s*(process)\\s+(\\w+|"[^"]+"|\'[^\']+\')\\s*{'
     'beginCaptures':
       '1':
         'name': 'support.keyword.nextflow'
@@ -30,36 +30,39 @@
     'end': '}'
     'patterns': [
       {
-        'include': '#directive'
+        'name': 'support.process.directive.type.nextflow'
+        'match': '(?:afterScript|beforeScript|cache|container|cpus|clusterOptions|disk|echo|errorStrategy|executor|ext|maxErrors|maxForks|maxRetries|memory|module|penv|publishDir|queue|scratch|storeDir|stageInMode|stageOutMode|tag|time|validExitStatus)\\b'
       }
       {
-        'include': '#input'
+        'name': 'support.constant.block.nextflow'
+        'match': '(?:input|output|script|shell|exec):'
       }
       {
-        'include': '#output'
+        'include': 'source.nextflow-groovy#comments'
       }
       {
-        'include': '#when'
+        'include': 'source.nextflow-groovy#support-functions'
       }
       {
-        'include': '#command'
+        'include': 'source.nextflow-groovy#keyword'
       }
       {
-        'include': '#groovy-code'
+        'include': 'source.nextflow-groovy#values'
+      }
+      {
+        'include': 'source.nextflow-groovy#anonymous-classes-and-new'
+      }
+      {
+        'include': 'source.nextflow-groovy#types'
+      }
+      {
+        'include': 'source.nextflow-groovy#parens'
+      }
+      {
+        'include': 'source.nextflow-groovy#closures'
+      }
+      {
+        'include': 'source.nextflow-groovy#braces'
       }
     ]
-  'directive':
-    'name': 'support.process.directive.type.nextflow'
-    'match': '(afterScript|beforeScript|cache|container|cpus|clusterOptions|disk|echo|errorStrategy|executor|ext|maxErrors|maxForks|maxRetries|memory|module|penv|publishDir|queue|scratch|storeDir|stageInMode|stageOutMode|tag|time|validExitStatus)\\b'
-  'input':
-    'name': 'support.process.input.constant.nextflow'
-    'match': 'input:'
-  'output':
-    'name': 'support.process.output.constant.nextflow'
-    'match': 'output:'
-  'when':
-    'name': 'support.process.when.constant.nextflow'
-    'match': 'when:'
-  'command':
-    'name': 'support.process.command.constant.nextflow'
-    'match': '(script|shell|exec)\\b:'
+
