@@ -36,6 +36,7 @@ The package will appear in the *Development* section of Atom's packages. If you 
 have Atom opened in developer mode and want to reload packages so you can test your changes. 
 Just do `cmd-alt-shift-L`. That will refresh Atom.
 
+Tip: use ALT+CMD-P hover a code snippet to show the current scope. 
 
 ## Useful links 
 
