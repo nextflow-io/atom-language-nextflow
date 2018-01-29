@@ -16,7 +16,7 @@
         'include': '#process-def'
       }
       {
-        'include': '#if-statement'
+        'include': '#code-block'
       }
       {
         'include': 'source.nextflow-groovy'
@@ -75,18 +75,12 @@
         'include': 'source.nextflow-groovy#braces'
       }
     ]
-  'if-statement':
-    'begin': '^\\s*(if)\\s*\\((?:[^\\)]*)\\)\\s*'
-    'beginCaptures':
-      '1':
-        'name': 'support.keyword.if.nextflow'
+  'code-block':
+    'name': 'support.code.block.nextflow'
+    'begin': '{'
     'end': '}'
     'patterns': [
       {
-        'begin': '{'
-        'end': '(?=})'
-        'patterns': [
-          'include': '#nfl-rules'
-        ]
+        'include': '#nfl-rules'
       }
     ]
