@@ -41,7 +41,7 @@
     'patterns': [
       {
         'name': 'support.process.directive.type.nextflow'
-        'match': '(?:afterScript|beforeScript|cache|container|cpus|clusterOptions|disk|echo|errorStrategy|executor|ext|maxErrors|maxForks|maxRetries|memory|module|penv|publishDir|queue|scratch|storeDir|stageInMode|stageOutMode|tag|time|validExitStatus)\\b'
+        'match': '(?:afterScript|beforeScript|cache|container|cpus|clusterOptions|disk|echo|errorStrategy|executor|ext|maxErrors|maxForks|maxRetries|memory|module|penv|publishDir|queue|scratch|storeDir|stageInMode|stageOutMode|tag|time|validExitStatus|when)\\b'
       }
       {
         'name': 'support.constant.block.nextflow'
