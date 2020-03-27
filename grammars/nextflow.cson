@@ -1,6 +1,6 @@
 'name': 'Nextflow'
 'scopeName': 'source.nextflow'
-'fileTypes': [ 'nf' ]
+'fileTypes': [ 'nf', 'config' ]
 'firstLineMatch': '^#!/*.*\\bnextflow'
 'foldingStartMarker': '(\\{\\s*$|^\\s*// \\{\\{\\{)'
 'foldingStopMarker': '^\\s*(\\}|// \\}\\}\\}$)'
